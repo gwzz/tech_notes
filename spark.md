@@ -76,3 +76,11 @@ $ sbt package
 ```
 
 ### Submit you application
+The jar package is located in your app's target directory. Now you can run **spark-submit** script.
+```
+$ SPRAK_HOME/bin/spark-submit \
+  -- class LocalPi
+  APP_HOME/target/{jar-name}
+```
+The application will run on your local, and will show the pi value in terminal.
+For more help on the options of submit script, you can find on spark website -> [click me](http://spark.apache.org/docs/latest/submitting-applications.html#master-urls "Spark Submit").
